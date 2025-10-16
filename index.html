@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9652343608904659"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>مصاريف المنزل</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<canvas id="particle-canvas"></canvas>
+<div id="tablo" style="  margin: auto;">
+  <h2 class="grafik-baslik">💸 مخطط النفقات</h2>
+  <canvas id="expenseChart" height="200"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  
+
+    <div class="home">
+        
+        <h1>مصاريف المنزل</h1>
+
+        <div class="kutular">
+            <div class="kutu-wrapper">
+                <button class="kutu" data-target="div1">الصندوق</button>
+                <div class="icerik" id="div1">0</div>
+            </div>
+
+            <div class="kutu-wrapper">
+                <button class="yemek kutu" data-target="div2">مصاريف الطعام</button>
+                <div class="icerik" id="div2">0</div>
+            </div>
+
+            <div class="kutu-wrapper">
+                <button class="başka kutu" data-target="div3">مصاريف اخرة</button>
+                <div class="icerik" id="div3">0</div>
+            </div>
+            
+            <div class="kutu-wrapper">
+                <button class="toplam" data-target="div4">جمع المصاريف</button>
+                <div class="icerik" id="div4">0</div>
+            </div>
+            <button  class="create">create</button>
+              <div class="inputs">
+        <input type="text" id="Name" placeholder="اسم المادة" />
+        <input type="number" id="price" placeholder="سعر المادة " />
+        <input type="number" id="amount" placeholder="كمية المادة" />
+        <input type="text" id="Total" placeholder="السعر الكلي للمادة"readonly />
+       <div class="input-wrapperr">
+  <input type="text" id="isim-input" placeholder=" نوع المادة" />
+  <button class="small-btn btn-ahmet" onclick="document.getElementById('isim-input').value = 'مصاريف الطعام'">مصاريف الطعام</button>
+  <button class="small-btn btn-mehmet" onclick="document.getElementById('isim-input').value = 'مصاريف اخرة'">مصاريف اخرة</button>
+   <button class="small-btn btn-ham" onclick="document.getElementById('isim-input').value = 'الصندوق'">الصندوق</button>
+</div>
+
+
+    </div>
+    
+
+        </div>
+        
+    </div>
+ <table class="td">
+
+        <tr>
+            <th>نوع المادة</th>
+            <th>السعرالمادة</th>
+            <th>كمية المادة</th>
+            <th> سعر الكلي المادة</th>
+            <th>اسم المادة</th>
+            <th>رقم العملية</th>
+        </tr>
+
+        
+            
+        </tr>
+    </table>
+    </div>
+   
+
+    <script src="scrıpt.js"></script>
+</body>
+</html>

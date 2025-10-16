@@ -1,0 +1,614 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #222;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #4083e9, #713bf0);
+    color: #eee;
+}
+.home{
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.kutular {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: 35px;
+    padding: 0 3%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.kutu {
+    width: 100%;         
+    height: 105px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #1a1919;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 2px solid transparent;
+}
+
+
+
+.kutu:not(.yemek):not(.başka) {
+    background-color: #fdbdb2;
+    border-color: #f8d2cbc4;
+}
+.kutu:not(.yemek):not(.başka):hover {
+    background-color: #f8cdcd;
+}
+
+.kutu.yemek {
+    background-color: #c6f5c2;
+    border-color: #e8f8de;
+}
+.kutu.yemek:hover {
+    background-color: #e0fadd;
+}
+
+.kutu.başka {
+    background-color: #f5e8c5;
+    border-color: #f0eddd;
+}
+.kutu.başka:hover {
+    background-color: #eee7d2;
+}
+.kutu-wrapper {
+    margin: 0 10px;
+    width: 400px;      
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.kutular {
+    display: flex;
+    justify-content: center;  
+    gap: 20px;          
+    margin-top: 35px;
+    padding: 0 3%;
+}
+
+
+
+.icerik {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+    position: absolute;
+    top: 110%;
+    width: 100%;
+    height: 100px;
+    background-color: #333;
+    border: 1px solid #666;
+    border-radius: 8px;
+    padding: 0 10px; 
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 10;
+    
+    
+}
+
+
+
+
+.icerik.active {
+    max-height: 200px; 
+    opacity: 1;
+    padding: 10px;
+}
+.create{
+    background-color: #f3b3c1;
+    border-radius: 6px;
+    border: none;
+    height: 25px;
+    text-transform: uppercase;
+    width: 99%;
+    cursor: pointer;
+    transition: 0.5s;
+    color: rgb(39, 35, 35);
+    top:104%;
+    left:0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    
+}
+.create:hover{
+    background-color: #f3cfd7;
+    letter-spacing: 2px;
+}
+
+.td{
+  
+    
+    text-align: left;
+    
+}
+.yu{
+    width: 15px;
+        
+}
+h1 {
+    text-align: center;
+    
+    margin-top: 5px;
+}
+table.td td, table.td th {
+    text-align: center; 
+}
+@media (max-width: 600px) {
+  .create {
+    position: static; 
+    margin: 20px auto 0 auto; 
+    display: block;
+    width: 90%; 
+    left: auto; 
+    top: auto;  
+  }
+  }
+.table-container{
+    position: relative;
+    left: 0px;
+    padding: 10px;
+    max-width:100%;
+    margin: 0px auto   ;
+}
+table.td {
+  border-collapse: collapse;
+  width: 900px;
+  background-color: #333;
+  color: white;
+  width: 95%;
+  margin-top: 100px;
+  margin: auto;
+
+}
+table.td th, table.td td {
+  border: 1px solid #555;
+  padding: 10px;
+  text-align: center;
+  
+}
+.inputs {
+  position:sticky  ;
+  top: 100px; /* ne kadar boşluk istersen */
+  left: 35%;
+  margin: auto;
+  width: 60%;
+  z-index: 999;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px 30px;
+  
+}
+
+
+input:focus{
+    transform: scale(1.05);
+    
+}
+.inputs input {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.5); /* daha açık */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #222d;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  transition: transform 0.2s ease;
+  
+}
+
+
+
+@media (max-width: 600px) {
+  .inputs {
+    width: 95%;
+    top: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .kutular {
+    flex-direction: column; 
+    align-items: center;
+  }
+  .kutu-wrapper {
+    width: 90%; 
+    margin: 10px 0;
+  }
+}
+@media (max-width: 600px) {
+  table.td {
+    width: 100%;
+  }
+}
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;  /* Üzerindeki tıklamaları engelle */
+  z-index: 9999;          /* En üstte görünsün */
+}
+@media (max-width: 600px) {
+  .inputs {
+    width: 90%;
+    left: 50%;
+    top: 60px;
+    padding: 15px;
+  }
+
+  .inputs input {
+    font-size: 16px;
+  }
+}
+
+
+.small-btn:hover {
+  background-color: #f3cfd7;
+}
+
+/* Butonların pozisyonları: sağdan başlıyor */
+.small-btn:nth-child(2) {
+  right: 50px;  /* 1. buton sağdan 50px */
+}
+
+.small-btn:nth-child(3) {
+  right: 5px;   /* 2. buton sağdan 5px */
+}
+.input-wrapperr {
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+  gap: 10px;
+}
+
+#isim-input {
+  flex-grow: 100;
+  width: 100%;
+  padding-right: 10px; /* Butonlar için sağdan boşluk */
+  height: 40px;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  color: #222;
+  outline: none;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+
+.small-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 28px;
+  padding: 0 10px;
+  font-size: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #6afff8;
+  color: #222;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* İlk buton */
+.small-btn:nth-child(2) {
+  right: 90px;
+
+}
+
+/* İkinci buton */
+.btn-mehmet {
+  right: 10px;
+  background-color: #6afff8;
+}
+.btn-ham {
+  right: 180px;
+  background-color: #6afff8;
+}
+.small-btn:hover {
+  background-color: rgb(170, 237, 245);
+  
+}
+input[type="number"] {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: ltr;
+  unicode-bidi: plaintext;
+}
+.inputs input::placeholder {
+  font-size: 14px; /* istediğin büyüklüğü buraya yaz */
+  font-weight: 500; /* opsiyonel, biraz kalınlaştırmak için */
+  color: rgba(0,0,0,0.5); /* istersen rengini ayarla */
+}
+
+
+@media (max-width: 600px) {
+  .input-wrapperr {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px;
+    align-items: stretch;
+    position: static !important; /* Absolute kaldır */
+  }
+  #isim-input {
+    padding-right: 10px !important; /* Buton yokken sağ boşluk kaldır */
+    width: 100% !important;
+  }
+  .small-btn {
+    position: static !important; /* Absolute kaldır */
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+  }
+}
+/* Dropdown Menüsü */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 6px;
+  padding: 5px 0;
+  right: 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Hover açılır */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.row-btn {
+  padding: 5px 10px;
+  margin: 0 4px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.row-btn.update {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.row-btn.update:hover {
+  background-color: #45a049;
+}
+
+.row-btn.delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.row-btn.delete:hover {
+  background-color: #d32f2f;
+}
+
+.number-text {
+  display: none;
+}
+
+.toplam{
+  width: 100%;         
+  height: 105px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #1a1919;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: 2px solid transparent;
+}
+.toplam:not(.yemek):not(.başka) {
+    background-color: #fca8f5;
+    border-color: #de9ef7c4;
+}
+.toplam:not(.yemek):not(.başka):hover {
+    background-color: #f8bbe4;
+}
+#tablo {
+
+  position: relative; /* gerekli */
+  width: 90%;
+  max-width: 500px;
+  height: 300px;
+  overflow: hidden;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 25px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: 'Segoe UI', 'Cairo', sans-serif;
+  color: #111;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+   animation: zoomIn 1.5s ease-in-out;
+  background: linear-gradient(145deg, #FF7675, #3424c905);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  
+
+}
+
+
+#tablo::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #ffffff,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  background-size: 1000% 1000%;
+  animation: borderAnimation 8s linear infinite;
+  border-radius: 23px;
+  padding: 2px;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  box-sizing: border-box; /* Bu önemli */
+  pointer-events: none; /* İçeriğe tıklanabilirliği engellemesin */
+}
+
+@keyframes borderAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+/* Grafik görünümü */
+#tablo canvas {
+  width: 100% !important;
+  height: 100% !important;
+  background: transparent;
+}
+
+/* Chart.js etiketleri ve yazıları için */
+.chartjs-render-monitor {
+  filter: none !important; /* kontrastı sıfırlamayalım */
+}
+
+/* Daha net yazılar için ek stiller */
+#tablo * {
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+}
+
+/* Tooltip ve etiket yazıları net görünür */
+.chartjs-tooltip,
+.chartjs-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000 !important;
+}
+.grafik-baslik {
+   font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+  font-family: 'Segoe UI', 'Cairo', sans-serif;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grafik-baslik {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+
